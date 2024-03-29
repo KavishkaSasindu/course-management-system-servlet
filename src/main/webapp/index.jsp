@@ -20,5 +20,6 @@
             </div>
         </div>
     </div>
+<jsp:include page="add.jsp"/>
 </body>
 </html>
