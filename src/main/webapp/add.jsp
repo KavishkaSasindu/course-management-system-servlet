@@ -18,7 +18,7 @@
             <div class="in-form">
                 <div class="add-course">Add Course</div>
                 <div class="in-form">
-                    <form class="row g-3">
+                    <form class="row g-3" method="post" action="add">
                         <div class="col-md-6">
                             <label for="course" class="form-label">Course</label>
                             <input type="text" class="form-control" id="course" name="course">

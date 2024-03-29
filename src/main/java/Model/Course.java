@@ -7,7 +7,7 @@ public class Course {
     private String category;
     private String duration;
 
-    Course(String course,String owner,String institute,String category,String duration){
+    public Course(String course, String owner, String institute, String category, String duration){
         this.course = course;
         this.owner = owner;
         this.institute = institute;
