@@ -12,10 +12,6 @@ import java.sql.SQLException;
 @WebServlet("/add")
 public class CourseServlet extends HttpServlet{
 
-    public CourseServlet() throws SQLException {
-        super();
-        CourseDuo duo = new CourseDuo();
-    }
 
     public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException{
         String cou = request.getParameter("course");
@@ -25,5 +21,14 @@ public class CourseServlet extends HttpServlet{
         String duration = request.getParameter("duration");
 
         Course course = new Course(cou,owner,institute,category,duration);
+
+        try {
+            CourseDuo duo = new CourseDuo();
+            duo.addCourse(course);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 }
